@@ -34,9 +34,30 @@ namespace Back2Basics
             string word = "Hello";
             bool real = false;
             char character = 'q';
-
             Console.WriteLine($"Different data types in c# int: {num3}, double:{frac}, float: {frac1}, string:{word}, boolean: {real}, char: {character}.");
 
+            //Ask the user for their first name and last name and print them in the format:
+            Console.Write("Please enter your first name: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Please enter your last name: ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine($"Hello, {firstName} {lastName}");
+
+            /*Store " The quick brown fox " in a variable and:
+            Trim spaces
+            Convert to uppercase
+            Print result*/
+
+            string wordTest = " The quick brown fox ";
+            wordTest = wordTest.Replace(" ", "").ToUpper();
+            Console.WriteLine(wordTest);
+
+            Console.WriteLine(wordTest.Substring(8, 5));
+
+            //Ask the user for an email and check if it contains "@" (print true or false).
+            Console.WriteLine("Please enter an email address: ");
+            string emailAddress = Console.ReadLine();
+            Console.WriteLine(emailAddress.Contains("@"));
         }
     }
 }
